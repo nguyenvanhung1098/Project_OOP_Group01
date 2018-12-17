@@ -1,0 +1,23 @@
+package createdata;
+
+import create.Country;
+import create.Person;
+import create.QuanHe;
+
+public class Main {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Manager manager = new Manager("D:\\Person.txt", "D:\\Country.txt", "D:\\PersonAndCountry.txt", "D:\\Organization.txt", "D:\\Event.txt","D:\\Location.txt");
+		for (Person person : manager.personList) {		
+			System.out.println(person.getM_DinhDanh());
+		}
+		for (Country country : manager.countryList) {
+			System.out.println(country.getM_DinhDanh());
+		}
+		for (QuanHe quanhe : manager.quanHeList) {
+			System.out.println(quanhe.getQuanhe());
+		
+	}
+
+}

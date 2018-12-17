@@ -1,0 +1,62 @@
+package create;
+
+public class Relationship {
+	private String quanhe; 
+	public Country country;
+	public Event event;
+	public Location location;
+	public Organization organization;
+	public Person person;
+	public Relationship() {		
+	}
+	
+//	public QuanHe(Location location, Country country, String quanhe) {
+//		this.location = location;
+//		this.country = country;
+//		this.quanhe= quanhe;
+//	}
+	
+	public Relationship(Person person , Organization organization, String quanhe) {
+		this.person = person;
+		this.organization= organization;
+		this.quanhe = quanhe;
+	}
+	
+	public Relationship(Event event, Country country, String quanhe) {
+		this.event= event;
+		this.country = country;
+		this.quanhe = quanhe;
+	}
+	
+	public Relationship(Event event, Location location , String quanhe) {
+		this.event= event;
+		this.location = location;
+		this.quanhe = quanhe;
+	}
+	
+	public Relationship(Person person, Country country, String quanhe) {
+		this.person = person;
+		this.country = country;
+		this.quanhe = quanhe;
+	}
+	
+	public Relationship(Organization organization, Country country, String quanhe) {
+		this.organization = organization;
+		this.country = country;
+		this.quanhe = quanhe;
+	}
+	
+	public Relationship(Organization organization, Location location, String quanhe) {
+		this.organization = organization;
+		this.location = location;
+		this.quanhe = quanhe;
+	}
+	public String getRelationship() {
+		return quanhe;
+	}
+	public void setRelationship(String quanhe) {
+		this.quanhe = quanhe;
+	}
+	
+	
+}

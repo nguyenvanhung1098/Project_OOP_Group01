@@ -1,0 +1,9 @@
+1545033818663	Convert local variable 'manager' to field
+1545074143181	Encapsulate field 'country'
+1545074153867	Encapsulate field 'event'
+1545074159950	Encapsulate field 'location'
+1545074167077	Encapsulate field 'organization'
+1545074174044	Encapsulate field 'person'
+1545074239943	Encapsulate field 'time'
+1545076030489	Convert local variable 'n1' to field
+1545076073192	Inline local variable 'rd'

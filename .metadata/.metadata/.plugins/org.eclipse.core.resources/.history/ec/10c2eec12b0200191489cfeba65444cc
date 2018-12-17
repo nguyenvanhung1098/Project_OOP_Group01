@@ -1,0 +1,56 @@
+package createdata;
+
+import java.util.ArrayList;
+import java.util.Random;
+import java.util.Vector;
+
+import create.Country;
+import create.Event;
+import create.Location;
+import create.Organization;
+import create.Person;
+import create.Relationship;
+
+public class CreateData {
+	static ArrayList<Relationship> relationshipList;
+	public Country country;
+	public Event event;
+	public Location location;
+	public Organization organization;
+	public Person person;
+	@SuppressWarnings("unused")
+	
+	
+	public CreateData() {
+		relationshipList = new ArrayList<>();
+		Manager manager = new Manager("D:\\Person.txt", "D:\\Country.txt", "D:\\QuanHe.txt", "D:\\Organization.txt", "D:\\Event.txt","D:\\Location.txt");
+		person = manager.personList.get(1);
+		System.out.println(person.getChucVu());
+		
+		
+	}
+	
+	
+	
+	@SuppressWarnings("unchecked")
+	public static void main(String[] args) {
+	
+//	Random rd = new Random();
+//	@SuppressWarnings("rawtypes")
+//	Vector v = new Vector();
+//    int iNew = 0 ;
+//    for (int i = 0; i < 10;  ) {
+//        iNew = rd.nextInt(100);
+//        if (!v.contains(iNew)){
+//            i++;
+//            v.add(iNew);
+//            System.out.println("Item " + (i+1) + ":" + iNew);
+//        }
+//    }
+		relationshipList = new ArrayList<>();
+		Manager manager = new Manager("D:\\Person.txt", "D:\\Country.txt", "D:\\QuanHe.txt", "D:\\Organization.txt", "D:\\Event.txt","D:\\Location.txt");
+		person = manager.personList.get(1);
+		System.out.println(person.getChucVu());
+	
+}
+}

@@ -1,0 +1,50 @@
+package createdata;
+
+import java.util.ArrayList;
+import java.util.Random;
+import java.util.Vector;
+
+import create.Country;
+import create.Organization;
+import create.Person;
+import create.QuanHe;
+
+public class CreateData {
+	ArrayList<QuanHe> quanhe;
+	Manager manager = new Manager("D:\\Person.txt", "D:\\Country.txt", "D:\\QuanHe.txt", "D:\\Organization.txt", "D:\\Event.txt","D:\\Location.txt");
+	for (Person person : manager.personList) {		
+		System.out.println(person.getM_DinhDanh());
+		System.out.println(person.getM_NhanHienThi());
+		System.out.println(person.getChucVu());
+		System.out.println(person.getM_MoTa());
+		
+	}
+	
+	for (Country country : manager.countryList) {
+		System.out.println(country.getM_DinhDanh());
+	}
+	for (Organization organization: manager.organizationList) {
+		System.out.println(organization.getM_DinhDanh());
+	}
+	for (String quanhe: manager.quanHeList) {
+		System.out.println(quanhe);
+	}
+	@SuppressWarnings("unchecked")
+	public static void main(String[] args) {
+	// Tao quan he nguoi voi nguoi
+	Random rd = new Random();
+	@SuppressWarnings("rawtypes")
+	Vector v = new Vector();
+    int iNew = 0 ;
+    for (int i = 0; i < 10;  ) {
+        iNew = rd.nextInt(100);
+        if (!v.contains(iNew)){
+            i++;
+            v.add(iNew);
+            System.out.println("Item " + (i+1) + ":" + iNew);
+        }
+    }
+	
+	
+}
+}

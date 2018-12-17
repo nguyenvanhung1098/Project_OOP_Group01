@@ -1,0 +1,14 @@
+package createdata;
+
+public class Main {
+
+	@SuppressWarnings("static-access")
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+//		
+		CreateData createdata = new CreateData(1000);
+		System.out.println(createdata.relationshipList.size());
+		
+	}
+
+}

@@ -1,0 +1,31 @@
+package createdata;
+
+import create.Country;
+import create.Organization;
+import create.Person;
+
+public class Main {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Manager manager = new Manager("D:\\Person.txt", "D:\\Country.txt", "D:\\QuanHe.txt", "D:\\Organization.txt", "D:\\Event.txt","D:\\Location.txt");
+		for (Person person : manager.personList) {		
+			System.out.println(person.getM_DinhDanh());
+			System.out.println(person.getM_NhanHienThi());
+			System.out.println(person.getChucVu());
+			System.out.println(person.getM_MoTa());
+			
+		}
+		
+		for (Country country : manager.countryList) {
+			System.out.println(country.getM_DinhDanh());
+		}
+		for (Organization organization: manager.organizationList) {
+			System.out.println(organization.getM_DinhDanh());
+		}
+		for (String quanhe: manager.quanHeList) {
+			System.out.println(quanhe);
+		}
+	}
+
+}

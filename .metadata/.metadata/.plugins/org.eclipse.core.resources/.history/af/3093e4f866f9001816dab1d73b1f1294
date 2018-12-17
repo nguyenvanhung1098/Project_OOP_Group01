@@ -1,0 +1,49 @@
+package createdata;
+
+import java.io.BufferedReader;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.IOException;
+import java.util.ArrayList;
+
+import create.Country;
+import create.NguonGoc;
+import create.Person;
+
+public class Manager {
+	ArrayList<Person> personList;
+	ArrayList<Country> countryList;
+	ArrayList<NguonGoc> nguonGocList;
+	
+//	public Manager() {
+//		
+//	}
+//	
+	public Manager(String personFile, String countryFile, String nguonGocFile) {
+		personList = new ArrayList<>();
+		countryList = new ArrayList<>();
+		nguonGocList = new ArrayList<>();
+		try {
+			BufferedReader br = new BufferedReader(new FileReader(personFile));
+			String line = null;
+			while ((line = br.readLine()) != null) {
+				Person person = new Person();
+				person.setM_DinhDanh(line);
+				personList.add(person);
+//				System.out.print(line);
+				
+			}
+		} catch (FileNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+	}
+	
+//	public static Manager instance = new Manager();
+	
+	
+}
